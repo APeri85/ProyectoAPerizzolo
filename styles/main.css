@@ -1,0 +1,589 @@
+@import url("https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Viaoda Libre", cursive;
+}
+
+p,
+li,
+a,
+label,
+input,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  line-height: 1.7em;
+}
+
+.titulo-pri > h1 > a {
+  font-family: "Viaoda Libre", cursive;
+}
+
+.logo {
+  display: inline-block;
+  background: url("../imagenes/logo.png") no-repeat center/contain;
+  width: 50px;
+  height: 50px;
+}
+
+.logo:hover {
+  -webkit-transform: scale(1.5, 1.1);
+          transform: scale(1.5, 1.1);
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+}
+
+.span-block {
+  display: block;
+}
+
+.span-negrita {
+  font-weight: 600;
+  color: #fd90b1;
+}
+
+.span-cursiva {
+  font-style: italic;
+  color: #fd90b1;
+}
+
+header input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .menu-md {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header {
+  background: #f3e9d1;
+}
+
+header .marca {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 60%;
+  padding: 1em;
+}
+
+header .menu {
+  background: #fd90b1;
+}
+
+header .menu-sm {
+  display: block;
+  text-align: center;
+  padding: 0.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1.3em;
+  height: 100%;
+}
+
+header .menu-md {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.9em;
+  list-style: none;
+  padding: 1em 0;
+}
+
+header .menu .active {
+  font-weight: 600;
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
+  text-underline-offset: 0.2em;
+}
+
+@media only screen and (min-width: 400px) {
+  header .marca {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 4vw;
+    font-size: 75%;
+    padding: 1em 5%;
+  }
+}
+
+@media only screen and (min-width: 473px) {
+  header .marca {
+    padding: 1em 5%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header .marca {
+    font-size: 100%;
+    gap: 1.3em;
+  }
+  header .logo {
+    width: 100px;
+    height: 75px;
+  }
+  header .menu-sm {
+    display: none;
+  }
+  header .menu-md {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1em;
+    padding: 1em 5%;
+  }
+}
+
+footer {
+  background: #fd90b1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1em;
+  text-align: center;
+  padding: 1em 5%;
+}
+
+footer .footer-redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5em;
+  font-size: 1.8rem;
+}
+
+footer .footer-contacto {
+  line-height: 1.5em;
+}
+
+footer a {
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+@media only screen and (min-width: 600px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+}
+
+main .contenedor {
+  height: 100%;
+}
+
+main .contenedor-home, main .contenedor-terapia, main .contenedor-tratamientos, main .contenedor-contacto, main .contenedor-equipo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+}
+
+@media only screen and (min-width: 1020px) {
+  main .contenedor-home, main .contenedor-terapia, main .contenedor-tratamientos, main .contenedor-contacto, main .contenedor-equipo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .contenedor-terapia {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .contenedor-tratamientos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .contenedor-contacto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .contenedor-equipo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+}
+
+main .contenedor .texto {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 1.7em;
+  padding: 2em 10%;
+}
+
+main .contenedor .texto h2 {
+  text-align: center;
+}
+
+main .contenedor .texto p {
+  text-align: justify;
+}
+
+main .dec-column {
+  width: 100%;
+  min-height: 200px;
+}
+
+main .dec-column-a {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  background: url("../imagenes/home-banner01.jpg") no-repeat 50% 60%/cover;
+}
+
+@media only screen and (min-width: 600px) {
+  main .dec-column-a {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background: url("../imagenes/home-banner01.jpg") no-repeat 50% 55%/cover;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .dec-column-a {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background: url("../imagenes/home-banner01.jpg") no-repeat 80% 55%/cover;
+  }
+}
+
+main .dec-column-b {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  background: url("../imagenes/home-banner02.jpg") no-repeat center/cover;
+}
+
+@media only screen and (min-width: 600px) {
+  main .dec-column-b {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    background: url("../imagenes/home-banner02.jpg") no-repeat 50% 70%/cover;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .dec-column-b {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    background: url("../imagenes/home-banner02.jpg") no-repeat 60% 70%/cover;
+  }
+}
+
+main .dec-column-c {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  background: url("../imagenes/terapia01.jpg") no-repeat 50% 60%/cover;
+}
+
+@media only screen and (min-width: 600px) {
+  main .dec-column-c {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background: url("../imagenes/terapia01.jpg") no-repeat 50% 55%/cover;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .dec-column-c {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background: url("../imagenes/terapia01.jpg") no-repeat 80% 55%/cover;
+  }
+}
+
+main .dec-column-d {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  background: url("../imagenes/terapia02.jpg") no-repeat center/cover;
+}
+
+@media only screen and (min-width: 600px) {
+  main .dec-column-d {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    background: url("../imagenes/terapia02.jpg") no-repeat 50% 70%/cover;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .dec-column-d {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    background: url("../imagenes/terapia02.jpg") no-repeat 60% 70%/cover;
+  }
+}
+
+main .dec-column-e {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  background: url("../imagenes/tratamientos01.jpg") no-repeat 50% 60%/cover;
+}
+
+@media only screen and (min-width: 600px) {
+  main .dec-column-e {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background: url("../imagenes/tratamientos01.jpg") no-repeat 50% 55%/cover;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .dec-column-e {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background: url("../imagenes/tratamientos01.jpg") no-repeat 80% 55%/cover;
+  }
+}
+
+main .dec-column-f {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  background: url("../imagenes/tratamientos02.jpg") no-repeat center/cover;
+}
+
+@media only screen and (min-width: 600px) {
+  main .dec-column-f {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    background: url("../imagenes/tratamientos02.jpg") no-repeat 50% 70%/cover;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .dec-column-f {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    background: url("../imagenes/tratamientos02.jpg") no-repeat 60% 70%/cover;
+  }
+}
+
+main .dec-column-g {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  background: url("../imagenes/home-banner01.jpg") no-repeat 50% 60%/cover;
+}
+
+@media only screen and (min-width: 600px) {
+  main .dec-column-g {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background: url("../imagenes/home-banner01.jpg") no-repeat 50% 55%/cover;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .dec-column-g {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background: url("../imagenes/home-banner01.jpg") no-repeat 80% 55%/cover;
+  }
+}
+
+main .dec-column-h {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  background: url("../imagenes/home-banner02.jpg") no-repeat center/cover;
+}
+
+@media only screen and (min-width: 600px) {
+  main .dec-column-h {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    background: url("../imagenes/home-banner02.jpg") no-repeat 50% 70%/cover;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .dec-column-h {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    background: url("../imagenes/home-banner02.jpg") no-repeat 60% 70%/cover;
+  }
+}
+
+main .dec-column-i {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  background: url("../imagenes/contacto01.jpg") no-repeat 50% 60%/cover;
+}
+
+@media only screen and (min-width: 600px) {
+  main .dec-column-i {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background: url("../imagenes/contacto01.jpg") no-repeat 50% 55%/cover;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .dec-column-i {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background: url("../imagenes/contacto01.jpg") no-repeat 80% 55%/cover;
+  }
+}
+
+main .dec-column-j {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  background: url("../imagenes/contacto02.jpg") no-repeat center/cover;
+}
+
+@media only screen and (min-width: 600px) {
+  main .dec-column-j {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    background: url("../imagenes/contacto02.jpg") no-repeat 50% 70%/cover;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  main .dec-column-j {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    background: url("../imagenes/contacto02.jpg") no-repeat 60% 70%/cover;
+  }
+}
+/*# sourceMappingURL=main.css.map */

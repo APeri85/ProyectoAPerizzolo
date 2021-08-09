@@ -1,0 +1,373 @@
+body{
+    height: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.span-block {
+	display: block;
+}
+.span-negrita {
+	font-weight: 600;
+	color: $color-accent-400;
+}
+.span-cursiva {
+	font-style: italic;
+	color: $color-accent-400;
+}
+
+header input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"]:checked ~ .menu-md {
+	display: flex;
+}
+
+header{
+    background: $color-accent-100;
+
+    .marca{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 60%;
+        padding: 1em;
+    }
+
+    .menu {
+        background: $color-accent-400;
+    
+        &-sm{
+
+            display: block;
+            text-align: center;
+            padding: 0.5em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 1.3em;
+            height: 100%;
+    }
+
+        &-md{
+        display: none;
+        flex-flow: column;
+        align-items: center;
+        gap: 0.9em;
+        list-style: none;
+        padding: 1em 0;
+    
+        
+
+    }    
+    .active{
+        font-weight: 600;
+        text-decoration: underline 2px;
+        text-underline-offset: 0.2em;
+    }
+
+    }
+    
+    @media only screen and (min-width: 400px){
+        .marca{
+            display: flex;
+            justify-content: flex-start;
+            gap: 4vw;
+            font-size: 75%;
+            padding: 1em 5%;
+        }
+    }
+    
+    @media only screen and (min-width: 473px){
+        .marca{
+                padding: 1em 5%;
+        }
+    }
+
+    @media only screen and (min-width: 768px){
+        .marca{
+            font-size: 100%;
+            gap: 1.3em;
+        }
+        .logo{
+                width: 100px;
+                height: 75px;
+        }
+        .menu{
+                &-sm{
+                display: none;
+                }
+                &-md{
+                    display: flex;
+                    flex-flow: row;
+                    align-items: center;
+                    gap: 1em;
+                    padding: 1em 5%
+            }
+        }
+        }
+}
+
+
+footer{
+    background: $color-accent-400;
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    text-align: center;
+    padding: 1em 5%;
+
+    .footer-redes{
+        display: flex;
+        gap: 0.5em;
+        font-size: 1.8rem;
+    }
+
+    .footer-contacto{
+        line-height: 1.5em;
+    }
+    a{
+        font-weight: 500;
+            text-decoration: underline;
+            text-underline-offset: 0.2em;
+    }
+    @media only screen and (min-width: 600px){
+        display: flex;
+        flex-flow: row;
+    }
+
+}
+
+main{
+    .contenedor{
+        height: 100%;
+        
+        &-home{
+            height: 100%;
+            display: flex;
+            flex-flow: column-reverse;
+            
+            @media only screen and (min-width: 1020px){
+                display: flex;
+                flex-flow: row;
+                
+            }
+        }
+        &-terapia{
+            @extend .contenedor-home;
+
+            @media only screen and (min-width: 1020px){
+                display: flex;
+                flex-flow: row;
+            }
+        }
+        &-tratamientos{
+            @extend .contenedor-home;
+
+            @media only screen and (min-width: 1020px){
+                display: flex;
+                flex-flow: row;
+            }
+        }
+        &-contacto{
+            @extend .contenedor-home;
+            
+            @media only screen and (min-width: 1020px){
+                display: flex;
+                flex-flow: row;
+            }
+
+        }
+        &-equipo{
+            @extend .contenedor-home;
+            
+            @media only screen and (min-width: 1020px){
+                display: flex;
+                flex-flow: row;
+            }
+
+        }
+        
+        .texto{
+            order: 2;
+            align-self: center;
+            display: flex;
+            flex-flow: column;
+            gap: 1.7em;
+            padding: 2em 10%;
+            h2{
+                text-align: center;
+                ;
+            }
+            p{
+                text-align: justify;
+            }
+        } 
+    }
+
+    .dec{
+        &-column{
+            @include box-imagenes (100%, 200px);
+            
+            &-a{
+                order: 1;
+                background: url("../imagenes/home-banner01.jpg") no-repeat 50% 60%/cover;
+                
+                @media only screen and (min-width: 600px){
+                    order: 1;
+                    background: url("../imagenes/home-banner01.jpg") no-repeat 50% 55%/cover;
+                }
+
+                @media only screen and (min-width: 1020px){
+                    order: 1;
+                    background: url("../imagenes/home-banner01.jpg") no-repeat 80% 55%/cover;
+                }
+                
+
+
+            }
+
+            &-b{
+                order: 3;
+                background: url("../imagenes/home-banner02.jpg") no-repeat center/cover;
+
+                @media only screen and (min-width: 600px){
+                    order: 3;
+                    background: url("../imagenes/home-banner02.jpg") no-repeat 50% 70%/cover;
+                }
+
+                @media only screen and (min-width: 1020px){
+                    order: 3;
+                    background: url("../imagenes/home-banner02.jpg") no-repeat 60% 70%/cover;
+                }
+
+            }
+            &-c{
+                order: 1;
+                background: url("../imagenes/terapia01.jpg") no-repeat 50% 60%/cover;
+                
+                @media only screen and (min-width: 600px){
+                    order: 1;
+                    background: url("../imagenes/terapia01.jpg") no-repeat 50% 55%/cover;
+                }
+
+                @media only screen and (min-width: 1020px){
+                    order: 1;
+                    background: url("../imagenes/terapia01.jpg") no-repeat 80% 55%/cover;
+                }
+                
+            }
+            &-d{
+                order: 3;
+                background: url("../imagenes/terapia02.jpg") no-repeat center/cover;
+
+                @media only screen and (min-width: 600px){
+                    order: 3;
+                    background: url("../imagenes/terapia02.jpg") no-repeat 50% 70%/cover;
+                }
+
+                @media only screen and (min-width: 1020px){
+                    order: 3;
+                    background: url("../imagenes/terapia02.jpg") no-repeat 60% 70%/cover;
+                }
+
+            }
+            &-e{
+                order: 1;
+                background: url("../imagenes/tratamientos01.jpg") no-repeat 50% 60%/cover;
+                
+                @media only screen and (min-width: 600px){
+                    order: 1;
+                    background: url("../imagenes/tratamientos01.jpg") no-repeat 50% 55%/cover;
+                }
+
+                @media only screen and (min-width: 1020px){
+                    order: 1;
+                    background: url("../imagenes/tratamientos01.jpg") no-repeat 80% 55%/cover;
+                }
+                
+            }
+            &-f{
+                order: 3;
+                background: url("../imagenes/tratamientos02.jpg") no-repeat center/cover;
+
+                @media only screen and (min-width: 600px){
+                    order: 3;
+                    background: url("../imagenes/tratamientos02.jpg") no-repeat 50% 70%/cover;
+                }
+
+                @media only screen and (min-width: 1020px){
+                    order: 3;
+                    background: url("../imagenes/tratamientos02.jpg") no-repeat 60% 70%/cover;
+                }
+
+            }
+            &-g{
+                order: 1;
+                background: url("../imagenes/home-banner01.jpg") no-repeat 50% 60%/cover;
+                
+                @media only screen and (min-width: 600px){
+                    order: 1;
+                    background: url("../imagenes/home-banner01.jpg") no-repeat 50% 55%/cover;
+                }
+
+                @media only screen and (min-width: 1020px){
+                    order: 1;
+                    background: url("../imagenes/home-banner01.jpg") no-repeat 80% 55%/cover;
+                }
+                
+            }
+            &-h{
+                order: 3;
+                background: url("../imagenes/home-banner02.jpg") no-repeat center/cover;
+
+                @media only screen and (min-width: 600px){
+                    order: 3;
+                    background: url("../imagenes/home-banner02.jpg") no-repeat 50% 70%/cover;
+                }
+
+                @media only screen and (min-width: 1020px){
+                    order: 3;
+                    background: url("../imagenes/home-banner02.jpg") no-repeat 60% 70%/cover;
+                }
+
+            }
+            &-i{
+                order: 1;
+                background: url("../imagenes/contacto01.jpg") no-repeat 50% 60%/cover;
+                
+                @media only screen and (min-width: 600px){
+                    order: 1;
+                    background: url("../imagenes/contacto01.jpg") no-repeat 50% 55%/cover;
+                }
+
+                @media only screen and (min-width: 1020px){
+                    order: 1;
+                    background: url("../imagenes/contacto01.jpg") no-repeat 80% 55%/cover;
+                }
+                
+            }
+            &-j{
+                order: 3;
+                background: url("../imagenes/contacto02.jpg") no-repeat center/cover;
+
+                @media only screen and (min-width: 600px){
+                    order: 3;
+                    background: url("../imagenes/contacto02.jpg") no-repeat 50% 70%/cover;
+                }
+
+                @media only screen and (min-width: 1020px){
+                    order: 3;
+                    background: url("../imagenes/contacto02.jpg") no-repeat 60% 70%/cover;
+                }
+
+            }
+
+        }
+    }
+
+}
