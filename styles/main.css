@@ -32,6 +32,10 @@ p {
   line-height: 1.7em;
 }
 
+ul {
+  line-height: 2em;
+}
+
 .titulo-pri > h1 > a {
   font-family: "Viaoda Libre", cursive;
 }
@@ -46,6 +50,10 @@ p {
 .logo:hover {
   -webkit-transform: scale(1.5, 1.1);
           transform: scale(1.5, 1.1);
+}
+
+.menu-sm:hover {
+  cursor: pointer;
 }
 
 body {
