@@ -22,7 +22,7 @@ header input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked ~ .menu-md {
-	display: flex;
+	display: flex; 
 }
 
 header{
@@ -199,6 +199,7 @@ main{
             flex-flow: column;
             gap: 1.7em;
             padding: 2em 10%;
+            
             h2{
                 text-align: center;
                 ;
@@ -206,7 +207,10 @@ main{
             p{
                 text-align: justify;
             }
-        } 
+        }
+        .input-contacto{
+            padding-right: 400px;
+        }
     }
 
     .dec{

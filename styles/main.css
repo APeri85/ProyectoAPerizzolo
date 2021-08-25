@@ -340,6 +340,10 @@ main .contenedor .texto p {
   text-align: justify;
 }
 
+main .contenedor .input-contacto {
+  padding-right: 400px;
+}
+
 main .dec-column {
   width: 100%;
   min-height: 200px;
